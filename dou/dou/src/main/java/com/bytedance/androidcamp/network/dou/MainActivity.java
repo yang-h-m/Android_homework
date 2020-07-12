@@ -191,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG,"callPostVideo");
         mBtn.setText("POSTING...");
         mBtn.setEnabled(false);
+        mBtnRefresh.setText("See me only");
         MultipartBody.Part coverImagePart = getMultipartFromUri("cover_image", mSelectedImage);
         MultipartBody.Part videoPart = getMultipartFromUri("video", mSelectedVideo);
         //@TODO 4下面的id和名字替换成自己的
@@ -236,6 +237,7 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d(TAG,"add my video");
                             }
                         }
+                        IsMe = false;
                     }
                     else {
                         mVideos = response.body().videos;
