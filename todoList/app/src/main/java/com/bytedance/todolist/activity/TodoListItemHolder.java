@@ -29,6 +29,7 @@ import java.util.Date;
 public class TodoListItemHolder extends RecyclerView.ViewHolder {
     private TextView mContent;
     private TextView mTimestamp;
+    private CheckBox checkBox;
     private View contentView;
     String TAG = "TodoListActivity";
 
@@ -37,6 +38,7 @@ public class TodoListItemHolder extends RecyclerView.ViewHolder {
         contentView = itemView;
         mContent = itemView.findViewById(R.id.tv_content);
         mTimestamp = itemView.findViewById(R.id.tv_timestamp);
+        checkBox = itemView.findViewById(R.id.ck_box);
     }
 
     public void bind(TodoListEntity entity) {
@@ -53,6 +55,20 @@ public class TodoListItemHolder extends RecyclerView.ViewHolder {
             mContent.setPaintFlags(0);
         }
         mTimestamp.setText(formatDate(entity.getTime()));
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    mContent.setTextColor(Color.GRAY);
+                    mContent.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+                    mContent.getPaint().setAntiAlias(true);
+                }
+                else {
+                    mContent.setTextColor(Color.BLACK);
+                    mContent.setPaintFlags(0);
+                }
+            }
+        });
     }
 
     public void setOnClickListener(View.OnClickListener listener) {
