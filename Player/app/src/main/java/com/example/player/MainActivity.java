@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private void initButton() {
         open(R.id.image,Image.class);
         open(R.id.video,Video.class);
+        open(R.id.videoPlayer,MyVideoPlayer.class);
         // 检查权限
         findViewById(R.id.permission).setOnClickListener(new View.OnClickListener() {
             @Override

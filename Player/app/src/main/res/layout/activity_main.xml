@@ -31,4 +31,12 @@
         android:text="@string/video"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/videoPlayer"
+        android:textAllCaps="false"/>
+
 </LinearLayout>

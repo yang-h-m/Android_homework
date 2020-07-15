@@ -4,6 +4,7 @@
     <string name="permission">Permission</string>
     <string name="image">Image</string>
     <string name="video">Video</string>
+    <string name="videoPlayer">MyVideoPlayer</string>
 
     <string name="image_text">可以通过相机或者网络加载图片</string>
     <string name="image_camera">Camera</string>
