@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TakePhoto</string>
+    <string name="btn_record">Record</string>
+    <string name="btn_capture">Capture</string>
+</resources>
